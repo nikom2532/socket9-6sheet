@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="12dp"
+        android:text="Delay time (sec)" />
+
+    <SeekBar
+        android:id="@+id/seekBarDelayTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView4"
+        android:max="10"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView3"
+        android:text="0 s" />
+
+    <TextView
+        android:id="@+id/mUserNameInst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:text="SLIDE SETTING"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mUserNameInst"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/textView4"
+        android:text="SLIDE"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_below="@+id/seekBarDelayTime"
+        android:text="Transition style" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/mUserNameInst"
+        android:layout_below="@+id/seekBarDelayTime"
+        android:text="Background" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_below="@+id/textView6" >
+
+        <RadioButton
+            android:id="@+id/checkBoxBackgroundWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickBackground"            
+            android:text="Default (White)" />
+
+        <RadioButton
+            android:id="@+id/checkBoxBackgroundChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="14dp"
+            android:onClick="onClickBackground"
+            android:text="Choose from device" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupTransitionStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/radioGroupBackground"
+        android:layout_toRightOf="@+id/textView4" >
+
+        <RadioButton
+            android:id="@+id/radioButtonFade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FADE" />
+
+        <RadioButton
+            android:id="@+id/radioButtonH_Push"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="H-PUSH" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPush"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PUSH" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSnap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SNAP" />
+
+        <RadioButton
+            android:id="@+id/radioButtonRandom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RANDOM" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBarDelayTime"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:text="10 s" />
+
+    <Switch
+        android:id="@+id/switchShowCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/switchShowAvatar"
+        android:layout_alignRight="@+id/switchShowAvatar"
+        android:layout_below="@+id/switchShowAvatar"
+        android:layout_marginTop="27dp"
+        android:text="Show Caption" />
+
+    <Switch
+        android:id="@+id/switchShowAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pathFile"
+        android:layout_below="@+id/radioGroupTransitionStyle"
+        android:layout_marginTop="60dp"
+        android:layout_toLeftOf="@+id/textView9"
+        android:text="Show Avatar" />
+
+    <Button
+        android:id="@+id/chooseBackground"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/switchShowAvatar"
+        android:layout_below="@+id/pathFile"
+        android:text="Select" />
+
+    <TextView
+        android:id="@+id/pathFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroupBackground"
+        android:layout_below="@+id/radioGroupBackground"
+        android:layout_marginTop="26dp"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBarDelayTime"
+        android:layout_centerHorizontal="true"
+        android:text="5 s" />
+
+    <EditText
+        android:id="@+id/EditTextCountSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroupTransitionStyle"
+        android:layout_below="@+id/radioGroupTransitionStyle"
+        android:ems="10"
+        android:text="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/TextViewCountSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroupTransitionStyle"
+        android:layout_below="@+id/EditTextCountSearch"
+        android:text="CountSearch" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switchShowCaption"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="104dp"
+        android:onClick="onStartClick"
+        android:text="Start" />
+
+    <Switch
+        android:id="@+id/switchShowLikeCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/switchShowCaption"
+        android:layout_alignRight="@+id/switchShowCaption"
+        android:layout_below="@+id/switchShowCaption"
+        android:layout_marginTop="25dp"
+        android:text="Show Like" />
+
+</RelativeLayout>

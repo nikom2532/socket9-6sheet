@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FrameLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="120dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/TextViewPresent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="500dp"
+                    android:layout_height="500dp"
+                    android:layout_gravity="center_horizontal" >
+
+                    <ImageSwitcher
+                        android:id="@+id/imageSwitcher"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/imageViewSlide1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/default_result" />
+
+                        <ImageView
+                            android:id="@+id/imageViewSlide2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/default_result" />
+                    </ImageSwitcher>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/ImageBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    
+
+    <LinearLayout
+        android:id="@+id/mDebugLogLayout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="380dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="640dp" >
+        
+	    <ScrollView         
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        
+	        >
+		    <TextView 
+		        android:id="@+id/debugLogTextView"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:textColor="#000000"
+		        android:ems="12" 
+		        />
+		        	        
+	    </ScrollView>
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:id="@+id/mLikeCounterLayuot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="90dp" >
+
+        <ImageView
+            android:id="@+id/mLikeImageBT"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_black_heart" />
+
+        <TextView
+            android:id="@+id/mLikeCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/UserImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.41" >
+
+            <ImageView
+                android:id="@+id/mImageUser"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.41"
+                />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3.41" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.41"
+                android:text="      " />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.41"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/mUserNameInst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.41"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="650dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/TextViewPresent"
+            android:layout_width="385dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textViewCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearance"
+                android:textColor="#000000"
+                android:textSize="40dp"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:textStyle="bold" />
+        </LinearLayout>
+<!-- 
+        <Button android:text="Prev" 
+            	android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onPrevClick"
+            />
+        <Button android:text="Next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNextClick"
+            />
+ -->
+             
+    </LinearLayout>
+
+</FrameLayout>
